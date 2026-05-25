@@ -1,0 +1,94 @@
+.impact {
+  background: var(--color-surface);
+}
+
+.impact__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.impact__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .impact__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.impact__stat {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+.impact__stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.impact__stat span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.testimonial {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial blockquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial footer cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.testimonial footer span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.testimonial__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial__dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.testimonial__dots button.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
